@@ -1,5 +1,5 @@
 {
-  "name": "neeo-oppo-20x",
+  "name": "neeo-oppo-udp-20x",
   "version": "0.0.1",
   "description": "NEEO Driver for Oppo UDP-203 and 205",
   "main": "index.js",
