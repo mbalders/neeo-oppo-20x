@@ -11,3 +11,4 @@ Missing codes for Input and HDR buttons
 This driver could easily be modified for BDP-10X players with commands found [here](http://cinema-therapy.de/wp-content/downloads/OPPO_BDP10x_IP_Remote_Control_Protocol_v2.0.pdf)  
 * Comm port changes to 48360
 * Command structure changes to "REMOTE <COMMAND>"
+
