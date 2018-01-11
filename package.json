@@ -3,9 +3,20 @@
   "version": "0.0.1",
   "description": "NEEO Driver for Oppo UDP-203 and 205",
   "main": "index.js",
+  "dependencies": {
+    "neeo-sdk": "^0.48.13"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbalders/neeo-oppo-20x.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbalders/neeo-oppo-20x/issues"
+  },
+  "homepage": "https://github.com/mbalders/neeo-oppo-20x#readme"
 }
