@@ -3,7 +3,7 @@
 const neeoapi = require('neeo-sdk');
 const net = require('net');
 
-const OPPO_IP = 'XXX.XXX.XXX.XXX';
+const OPPO_IP = process.env.OPPO20XIP;
 const OPPO_PORT = 23;
 
 var key;
