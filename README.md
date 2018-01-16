@@ -4,8 +4,8 @@ This driver only implements commands to replace the remote control, but network 
 
 ## Use
 * This driver is setup to be used in a single SDK instance, multiple device configuration
-- [NEEO SDK multipleDevices example](https://github.com/NEEOInc/neeo-sdk-examples)
-- [My own implementation](https://github.com/mbalders)
+  * [NEEO SDK multipleDevices example](https://github.com/NEEOInc/neeo-sdk-examples)
+  * [My own implementation](https://github.com/mbalders)
 * Be sure to set your player IP's address as enviroment variable OPPO20XIP
 
 ## Command codes
