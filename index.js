@@ -3,15 +3,16 @@
 const neeoapi = require('neeo-sdk');
 const net = require('net');
 
-const OPPO_IP = process.env.OPPO20XIP;
 const OPPO_PORT = 23;
+const OPPO_IP = process.env.OPPO20XIP; //or hard code your IP here
+if (!OPPO_IP) console.log("ERROR! -> process.env.OPPO20XIP not set");
 
 var key;
 var client;
 
 const controller = {
   onButtonPressed: function onButtonPressed(name) {
-    console.log(`[CONTROLLER] ${name} button pressed`);  
+    console.log(`[CONTROLLER] [oppoUdp20x] ${name} pressed`);  
     
     key = '#';
     
