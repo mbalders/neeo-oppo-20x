@@ -1,4 +1,4 @@
-# NEEO Driver for Oppo UDP-203 and 205
+# NEEO Driver for Oppo UDP-203 and 205 IP Control
 
 This driver only implements commands to replace the remote control, but network control protocol is capable of more. It allows for querying of state (e.g. query playback status) and directly setting player features (e.g. set output resolution to 1080p).
 

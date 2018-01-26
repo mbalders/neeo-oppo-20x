@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mbalders/neeo-oppo-20x/issues"
   },
-  "homepage": "https://github.com/mbalders/neeo-oppo-20x#readme"
+  "homepage": "https://github.com/mbalders/neeo-oppo-20x#readme",
+  "dependencies": {
+    "string-raw": "^1.0.1"
+  }
 }

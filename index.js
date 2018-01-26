@@ -1,7 +1,10 @@
 'use strict';
 
-const neeoapi = require('neeo-sdk');
 const net = require('net');
+
+const stringRaw = require('string-raw');
+
+const neeoapi = require('neeo-sdk');
 
 const OPPO_PORT = 23;
 const OPPO_IP = process.env.OPPO20XIP; //or hard code your IP here
@@ -12,7 +15,7 @@ var client;
 
 const controller = {
   onButtonPressed: function onButtonPressed(name) {
-    console.log(`[CONTROLLER] [oppoUdp20x] ${name} pressed`);  
+    console.log('[oppoUdp20x] [Pressed] ' + name);  
     
     key = '#';
     
@@ -213,14 +216,14 @@ const controller = {
   
     client = new net.Socket()
       .on('data', function(data) {
-        console.log('Received: ' + data);
+        console.log(stringRaw`[oppoUdp20x] [Response] ${data}`);
         client.destroy(); // kill client after server's response
       })
       .on('error', function(e) {
-        console.log('error', e);
+        console.log(stringRaw`[oppoUdp20x] [Error] ${e}`);
       })
       .connect(OPPO_PORT, OPPO_IP, function(){
-        console.log('Connected: ' + key);
+        console.log(stringRaw`[oppoUdp20x] [Sending] ${key}`);
         client.write(key);
       });
   }
