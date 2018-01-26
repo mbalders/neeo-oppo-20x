@@ -2,8 +2,6 @@
 
 const net = require('net');
 
-const stringRaw = require('string-raw');
-
 const neeoapi = require('neeo-sdk');
 
 const OPPO_PORT = 23;
@@ -15,7 +13,7 @@ var client;
 
 const controller = {
   onButtonPressed: function onButtonPressed(name) {
-    console.log('[oppoUdp20x] [Pressed] ' + name);  
+    console.log(`[oppoUdp20x] [Pressed] ${name}`);  
     
     key = '#';
     
@@ -216,14 +214,14 @@ const controller = {
   
     client = new net.Socket()
       .on('data', function(data) {
-        console.log(stringRaw`[oppoUdp20x] [Response] ${data}`);
+        console.log(`[oppoUdp20x] [Response] ${data}`);
         client.destroy(); // kill client after server's response
       })
       .on('error', function(e) {
-        console.log(stringRaw`[oppoUdp20x] [Error] ${e}`);
+        console.log(`[oppoUdp20x] [Error] ${e}`);
       })
       .connect(OPPO_PORT, OPPO_IP, function(){
-        console.log(stringRaw`[oppoUdp20x] [Sending] ${key}`);
+        console.log(`[oppoUdp20x] [Sending] ${JSON.stringify(key)}`);
         client.write(key);
       });
   }
