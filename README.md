@@ -3,10 +3,11 @@
 This driver only implements commands to replace the remote control, but network control protocol is capable of more. It allows for querying of state (e.g. query playback status) and directly setting player features (e.g. set output resolution to 1080p).
 
 ## Use
-* This driver is setup to be used in a single SDK instance, multiple device configuration
-  * [NEEO SDK multipleDevices example](https://github.com/NEEOInc/neeo-sdk-examples)
-  * [My own implementation](https://github.com/mbalders)
-* Be sure to set your player IP's address as enviroment variable OPPO20XIP
+* This driver is setup to be used with SDK v0.50.0
+* Set your player's IP in the package.json file
+`"neeoSdkOptions": {
+  "oppoIp": "192.168.1.10"
+}`
 
 ## Command codes
 * Sourced from [here](https://www.oppodigital.co.uk/UserFiles/Docs/PDF/UDP-20X_Simple_IP_Control_Protocol_v1.0.pdf) 

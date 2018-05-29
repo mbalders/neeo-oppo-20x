@@ -1,12 +1,17 @@
 'use strict';
 
 const net = require('net');
-
 const neeoapi = require('neeo-sdk');
 
+const packageFile = require(process.cwd() + '/package.json');
+const sdkOptions = packageFile.neeoSdkOptions || {};
+
+if (sdkOptions.oppoIp == undefined) {
+  console.log('[OPPO UDP-20X IP] No IP address defined. package.json -> sdkOptions -> oppoIp');
+}
+
+const OPPO_IP = sdkOptions.oppoIp;
 const OPPO_PORT = 23;
-const OPPO_IP = process.env.OPPO20XIP; //or hard code your IP here
-if (!OPPO_IP) console.log("ERROR! -> process.env.OPPO20XIP not set");
 
 var key;
 var client;
@@ -272,4 +277,6 @@ const oppoUdp20x = neeoapi.buildDevice('OPPO UDP-20X IP')
 
 .addButtonHander(controller.onButtonPressed);
 
-module.exports = oppoUdp20x;
+module.exports = {
+  devices: [oppoUdp20x]
+}
