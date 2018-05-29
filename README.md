@@ -4,10 +4,12 @@ This driver only implements commands to replace the remote control, but network 
 
 ## Use
 * This driver is setup to be used with SDK v0.50.0
-* Set your player's IP in the package.json file
-`"neeoSdkOptions": {
+* Set your player's IP in the `package.json` file
+` 
+"neeoSdkOptions": {
   "oppoIp": "192.168.1.10"
-}`
+}
+`
 
 ## Command codes
 * Sourced from [here](https://www.oppodigital.co.uk/UserFiles/Docs/PDF/UDP-20X_Simple_IP_Control_Protocol_v1.0.pdf) 
