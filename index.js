@@ -18,7 +18,7 @@ var client;
 
 const controller = {
   onButtonPressed: function onButtonPressed(name) {
-    console.log(`[oppoUdp20x] [Pressed] ${name}`);  
+    console.log(`[oppo-udp-20x] [Pressed] ${name}`);  
     
     key = '#';
     
@@ -219,14 +219,14 @@ const controller = {
   
     client = new net.Socket()
       .on('data', function(data) {
-        console.log(`[oppoUdp20x] [Response] ${data}`);
+        console.log(`[oppo-udp-20x] [Response] ${data}`);
         client.destroy(); // kill client after server's response
       })
       .on('error', function(e) {
-        console.log(`[oppoUdp20x] [Error] ${e}`);
+        console.log(`[oppo-udp-20x] [Error] ${e}`);
       })
       .connect(OPPO_PORT, OPPO_IP, function(){
-        console.log(`[oppoUdp20x] [Sending] ${JSON.stringify(key)}`);
+        console.log(`[oppo-udp-20x] [Sending] ${JSON.stringify(key)}`);
         client.write(key);
       });
   }
